@@ -116,8 +116,6 @@ public class BlacklistedApis {
         parent.measure(100, 100);
     }
 
-    // TODO(b/122905906): Enable this test.
-    @Ignore
     @SuppressLint({"PrivateApi", "CheckReturnValue"})
     @Test
     public void cannotCallBlackListedAfterSpying() {
@@ -147,8 +145,6 @@ public class BlacklistedApis {
         }
     }
 
-    // TODO(b/122905906): Enable this test.
-    @Ignore
     @Test
     public void spiesCannotBeUsedToCallHiddenMethods() {
         CallBlackListedMethod t = spy(new CallBlackListedMethod());
@@ -170,8 +166,6 @@ public class BlacklistedApis {
         public abstract void unused();
     }
 
-    // TODO(b/122905906): Enable this test.
-    @Ignore
     @Test
     public void mocksOfAbstractClassesCannotBeUsedToCallHiddenMethods() {
         CallBlacklistedMethodAbstract t = mock(CallBlacklistedMethodAbstract.class);
